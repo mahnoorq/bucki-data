@@ -8,7 +8,7 @@ def find_closest_fraction(x, tol=0.01, max_degree=10, return_frac=False):
     """
     This function finds the closest and simplest fraction associated with the input x (up to denominator max_degree)
     """
-     xp = np.abs(x)
+    xp = np.abs(x)
     x0 = np.floor(xp)
     dx = xp - x0
     if dx < tol:

@@ -182,6 +182,10 @@ class BuckyNet:
                 verbose = 0,
                 normalize = False):
 
+        # train_test_split split arrays or matrices into random train and test subsets.
+        # it gives 2 sets of train and test arrays
+        # we find the log of the inputs and get the train and test datasets for the input and output
+        # then split the input and output training dataset further into training and validation datasets
         self.inputs_train, self.inputs_test, self.outputs_train, self.outputs_test = \
             train_test_split(np.log(inputs), outputs, test_size=test_size, shuffle=False)
         self.inputs_train, self.inputs_dev, self.outputs_train, self.outputs_dev = \
