@@ -196,7 +196,11 @@ class BuckyNet:
         self.num_neurons = num_neurons
         self.activation = activation
         self.initializer = initializer
+        # nepoch is the number of passes of the entire training dataset through the ML algorithm
         self.nepoch = nepoch
+        # patience is the number of epochs it must continue after the loss stopped from decreasing. 
+        # If you don't set patience value, the training will continue for all the epochs you set, 
+        # even if your training results are not getting any better. 
         self.patience = patience
         self.nullspace_loss = nullspace_loss
         self.l1_reg = l1_reg
